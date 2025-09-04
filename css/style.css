@@ -1,5 +1,5 @@
 img {
-    width: 100px;
+    width: 150px;
     border-radius: 50px;
     float: left;
     margin-right: 10px;
@@ -7,4 +7,5 @@ img {
 
   .username {
     font-weight: bold;
+    padding-top: 20px;
   }
