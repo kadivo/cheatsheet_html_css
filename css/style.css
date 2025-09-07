@@ -1,8 +1,17 @@
-img {
+  img {
+    object-fit: cover;
+  }
+  #pfp {
     width: 150px;
+    height: 150px;
     border-radius: 50px;
     float: left;
     margin-right: 10px;
+  }
+
+  #orange_cat_small {
+    width: 200px;
+    height: 250px;
   }
 
   .username {
