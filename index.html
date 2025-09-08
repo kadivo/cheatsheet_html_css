@@ -10,26 +10,66 @@
   </head>
 
   <body>
-    <img id="pfp" src="/images/ottopix.jpg" alt="cat otto sitting like he's tired of everything">
-    <p class="username">Kadi</p>
-    <p>Visiitkaart</p>
-    <p>My first <em>webpage</em></p>
-    <a href="company/about.html">About me</a>
-    <a href="/images/ottopix2.jpg">My cat</a>
-    <a href="#section-html">HTML</a>
-    <a href="#section-css">CSS</a>
-    <a href="https://google.com" target="_blank">Google</a>
-    <a href="mailto:kadi.voika@voco.ee">Email Me</a>
+    <a href="#content" class="skip-link">Liigu sisu juurde</a>
+    <header class="header">
     <h1>CheatSheet</h1>
-    <h2 id="section-html">&lt;HTML&gt;</h2>
-    <p>HTML cheatsheet</p>
-    <h3>Code</h3>
-    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quia odit fugit nisi ratione nostrum pariatur dolore, atque porro placeat cumque sunt praesentium labore itaque consectetur saepe, eaque enim. Minus quas cumque quis dolorum, aliquam ipsum, natus eveniet omnis illo enim assumenda eligendi cum! Assumenda possimus in consequuntur officia quas quisquam. Autem, quisquam dolores dolorem tempore sit, adipisci sint quas officiis fugit culpa veritatis. Veniam quos tenetur, consequatur neque voluptates molestias dolores nam vitae nisi. Dolor animi ducimus aperiam, nam incidunt illo, voluptatum ab ad non, modi totam expedita ipsam temporibus culpa? Id asperiores consectetur ullam quam amet quasi, fuga veniam quae voluptatum eum pariatur nihil tempore, ratione nemo nostrum temporibus voluptas neque nobis! Laborum accusantium in ipsa sequi natus, quod quo animi excepturi maiores officiis dolores cupiditate porro tenetur nesciunt rem deserunt voluptatum earum neque molestias reiciendis quis? Porro minima, aliquid ratione nam facilis cupiditate, fugit beatae, repellendus alias blanditiis optio? Veritatis alias explicabo facilis aliquid ullam minima eaque iure quos quasi dicta provident sequi tempora dignissimos et ea delectus, quaerat quae enim nesciunt aliquam. Sunt a, saepe dolores odit obcaecati quis animi, aspernatur facilis fuga accusantium excepturi ipsum eius officia at mollitia architecto tempore modi voluptate asperiores dolor sint!</p>
-    <h3>Images</h3>
-    <img id="orange_cat_small" src="/images/orange_cat_small.jpg" alt="Orange cat">
-    <h2 id="section-css">CSS</h2>
-    <p>CSS cheatsheet</p>
-    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugiat vero quisquam nemo dolore expedita blanditiis officiis nostrum, nesciunt placeat doloremque libero aperiam dolorum explicabo commodi ab consequuntur excepturi qui minima nam iusto molestiae ex autem maxime. Debitis, alias provident, repellendus sed facere maxime aliquid quia reiciendis numquam labore aut amet! Deserunt dicta ex optio, animi, quod similique ut eos id, repudiandae quibusdam iusto quas repellendus! Obcaecati vel quod temporibus adipisci? Tenetur incidunt nobis sit. Ipsam atque est exercitationem ea accusamus, ullam officia cum hic sit velit autem aliquid iure expedita vitae. Praesentium, dolor ab repellendus voluptatem facilis magnam quos a laborum architecto? Qui velit similique quidem tenetur maxime neque nam possimus eos sint, modi quo illum voluptas nemo. Odio impedit assumenda magni repellat quaerat temporibus beatae hic libero molestias optio praesentium, neque suscipit laborum ad dicta vitae, dolorem officia pariatur error nemo fugiat? A unde eveniet labore voluptatibus, ex assumenda omnis iusto laudantium cum nobis tempore sunt aut vero nesciunt inventore reiciendis quia sed molestiae minima fuga temporibus! Animi dicta ut expedita ipsum quos at dolorem vel fuga necessitatibus quaerat. Ea cum assumenda, obcaecati expedita veniam temporibus incidunt aliquam quas, minus, fugit quidem. Atque molestias nostrum reprehenderit cumque eos doloribus?</p>
+      <nav class="main-nav">
+        <a href="#section-html">HTML</a>
+        <a href="#section-css">CSS</a>
+        <a href="#kontakt">Kontakt</a>
+        <a href="/images/ottopix2.jpg" target="_blank">Kõige olulisem link</a>
+      </nav>
+    </header>
+    <main id="content">
+      <section id="section-html">
+      <h2>&lt;HTML&gt;</h2>
+        <p>HTML cheatsheet</p>
+        <h3>Code</h3>
+          <h4>Struktuur</h4>
+            <p>head - Siia lähevad metad, title, lingid stylesheetile jms</p>
+            <p>body - Siia läheb kogu lehe sisu</p>
+            <p>header - Navigatsiooniriba jms</p>
+            <p>main - Lehe põhimaterjal</p>
+            <p>footer - lehe või sektsiooni jalus (autoriõigused, kontaktid)</p>
+
+          <h4>Headerid</h4>
+            <ul>
+              <li>Header 1</li>
+              <li>Header 2</li>
+              <li>Header 3</li>
+              <li>Header 4</li>
+              <li>Header 5</li>
+              <li>Header 6</li>
+            </ul>
+          <h4>Images</h4>
+          <p>&lt;img src="pildi link" alt="pildi alternatiivteks kui veebileht ei lae või kui kasutatakse ekraanilugejat"&gt;</p>
+            <p>Link välislehele</p>
+            <a href="https://en.wikipedia.org/wiki/Cat" target="_blank"><img id="orange_cat_small" src="/images/orange_cat_small.jpg" alt="Orange cat"></a>
+            <p>Link alamlehele</p>
+            <a href="#alamleht/about.html" target="_blank"><img src="images/ottopix2.jpg" alt="Pilt Ottost" width="500px"></a>
+          <h4>Navigatsiooniriba</h4>
+            <p>Sectionile anda id, siis kasutada ankruelementi &lt;a href="#section-id"&gt;Nimi&lt;a&gt;</p>
+          <h4>Testid</h4>
+            <h5>Grid</h5>
+            <div class="cards">
+              <article>Kaart 1</article>
+              <article>Kaart 2</article>
+              <article>Kaart 3</article>
+            </div>
+        </section>
+      <section id="section-css">
+      <h2>CSS</h2>
+        <p>CSS cheatsheet</p>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugiat vero quisquam nemo dolore expedita blanditiis officiis nostrum, nesciunt placeat doloremque libero aperiam dolorum explicabo commodi ab consequuntur excepturi qui minima nam iusto molestiae ex autem maxime. Debitis, alias provident, repellendus sed facere maxime aliquid quia reiciendis numquam labore aut amet! Deserunt dicta ex optio, animi, quod similique ut eos id, repudiandae quibusdam iusto quas repellendus! Obcaecati vel quod temporibus adipisci? Tenetur incidunt nobis sit. Ipsam atque est exercitationem ea accusamus, ullam officia cum hic sit velit autem aliquid iure expedita vitae. Praesentium, dolor ab repellendus voluptatem facilis magnam quos a laborum architecto? Qui velit similique quidem tenetur maxime neque nam possimus eos sint, modi quo illum voluptas nemo. Odio impedit assumenda magni repellat quaerat temporibus beatae hic libero molestias optio praesentium, neque suscipit laborum ad dicta vitae, dolorem officia pariatur error nemo fugiat? A unde eveniet labore voluptatibus, ex assumenda omnis iusto laudantium cum nobis tempore sunt aut vero nesciunt inventore reiciendis quia sed molestiae minima fuga temporibus! Animi dicta ut expedita ipsum quos at dolorem vel fuga necessitatibus quaerat. Ea cum assumenda, obcaecati expedita veniam temporibus incidunt aliquam quas, minus, fugit quidem. Atque molestias nostrum reprehenderit cumque eos doloribus?</p>
+      </section>
     <a href="#">Jump to Top</a>
+    </main>
+    <footer>
+      <div class="kaart" id="kontakt">
+      <img id="pfp" src="/images/ottopix.jpg" alt="cat otto sitting like he's tired of everything">
+        <p class="username">Kadi</p>
+        <p class="email">kadi.voika@voco.ee</p>
+      </div>  
+    </footer>
   </body>
 </html>
