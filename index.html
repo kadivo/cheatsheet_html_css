@@ -1,18 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="HTML and CSS cheatsheet">
-    <meta name="keywords" content="HTML, CSS, CheatSheet">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="HTML and CSS cheatsheet" />
+    <meta name="keywords" content="HTML, CSS, CheatSheet" />
     <title>CheatSheet HTML CSS</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css" />
   </head>
 
   <body>
     <a href="#content" class="skip-link">Liigu sisu juurde</a>
-    <header class="header">
-    <h1>CheatSheet</h1>
+    <header>
+      <h1 class="title">CheatSheet</h1>
+      <!--navgatisooniriba-->
       <nav class="main-nav">
         <a href="#section-html">HTML</a>
         <a href="#section-css">CSS</a>
@@ -20,67 +21,144 @@
         <a href="/images/ottopix2.jpg" target="_blank">Kõige olulisem link</a>
       </nav>
     </header>
+    <!--sisu-->
     <main id="content">
       <section id="section-html">
-      <h2>&lt;HTML&gt;</h2>
+        <h2>&lt;HTML&gt;</h2>
         <p>HTML cheatsheet</p>
-        <h3>Code</h3>
-          <h4>Struktuur</h4>
-            <p>head - Siia lähevad metad, title, lingid stylesheetile jms</p>
-            <p>body - Siia läheb kogu lehe sisu</p>
-            <p>header - Navigatsiooniriba jms</p>
-            <p>main - Lehe põhimaterjal</p>
-            <p>footer - lehe või sektsiooni jalus (autoriõigused, kontaktid)</p>
-
+        <h3>Kood</h3>
+        <!--html faili struktuur-->
+        <h4>Struktuur</h4>
+        <p>head - Siia lähevad metad, title, lingid stylesheetile jms</p>
+        <p>body - Siia läheb kogu lehe sisu</p>
+        <p>header - Navigatsiooniriba jms</p>
+        <p>main - Lehe põhimaterjal</p>
+        <p>footer - lehe või sektsiooni jalus (autoriõigused, kontaktid)</p>
+        <!--lihtsalt sisutäide-->
+        <div class="lists">
           <h4>Headerite unorganised list</h4>
-            <ul>
-              <li>Header 1</li>
-              <li>Header 2</li>
-              <li>Header 3</li>
-              <li>Header 4</li>
-              <li>Header 5</li>
-              <li>Header 6</li>
-            </ul>
-            <h4>Headerite organised list</h4>
-            <ol>
-              <li>Header 1</li>
-              <li>Header 2</li>
-              <li>Header 3</li>
-              <li>Header 4</li>
-              <li>Header 5</li>
-              <li>Header 6</li>
-            </ol>
-          <h4>Images</h4>
-          <p>&lt;img src="pildi link" alt="pildi alternatiivteks kui veebileht ei lae või kui kasutatakse ekraanilugejat"&gt;</p>
+          <ul>
+            <li>Header 1</li>
+            <li>Header 2</li>
+            <li>Header 3</li>
+            <li>Header 4</li>
+            <li>Header 5</li>
+            <li>Header 6</li>
+          </ul>
+          <h4>Headerite organised list</h4>
+          <ol>
+            <li>Header 1</li>
+            <li>Header 2</li>
+            <li>Header 3</li>
+            <li>Header 4</li>
+            <li>Header 5</li>
+            <li>Header 6</li>
+          </ol>
+        </div>
+        <!--koik mis piltidega-->
+        <h4>Images</h4>
+        <p>
+          &lt;img src="pildi link" alt="pildi alternatiivteks kui veebileht ei
+          lae või kui kasutatakse ekraanilugejat"&gt;
+        </p>
+        <!--Grid harjutus piltidega-->
+        <div class="pictures">
+          <div class="grid_title"><p>Siin on kasutatud gridi</p></div>
+          <div class="pic1">
             <p>Link välislehele</p>
-            <a href="https://en.wikipedia.org/wiki/Cat" target="_blank"><img id="orange_cat_small" src="/images/orange_cat_small.jpg" alt="Orange cat"></a>
-            <p>Link alamlehele</p>
-            <a href="alamleht/about.html" target="_blank"><img src="images/ottopix2.jpg" alt="Pilt Ottost" width="500px"></a>
-          <h4>Videos</h4>
-            <video src="media/cat_video.mp4" controls width="320" height="240"></video>
-          <h4>Navigatsiooniriba</h4>
-            <p>Sectionile anda id, siis kasutada ankruelementi &lt;a href="#section-id"&gt;Nimi&lt;a&gt;</p>
-          <h4>Testid</h4>
-            <h5>Grid</h5>
-            <div class="cards">
-              <article>Kaart 1</article>
-              <article>Kaart 2</article>
-              <article>Kaart 3</article>
-            </div>
-        </section>
-      <section id="section-css">
-      <h2>CSS</h2>
-        <p>CSS cheatsheet</p>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugiat vero quisquam nemo dolore expedita blanditiis officiis nostrum, nesciunt placeat doloremque libero aperiam dolorum explicabo commodi ab consequuntur excepturi qui minima nam iusto molestiae ex autem maxime. Debitis, alias provident, repellendus sed facere maxime aliquid quia reiciendis numquam labore aut amet! Deserunt dicta ex optio, animi, quod similique ut eos id, repudiandae quibusdam iusto quas repellendus! Obcaecati vel quod temporibus adipisci? Tenetur incidunt nobis sit. Ipsam atque est exercitationem ea accusamus, ullam officia cum hic sit velit autem aliquid iure expedita vitae. Praesentium, dolor ab repellendus voluptatem facilis magnam quos a laborum architecto? Qui velit similique quidem tenetur maxime neque nam possimus eos sint, modi quo illum voluptas nemo. Odio impedit assumenda magni repellat quaerat temporibus beatae hic libero molestias optio praesentium, neque suscipit laborum ad dicta vitae, dolorem officia pariatur error nemo fugiat? A unde eveniet labore voluptatibus, ex assumenda omnis iusto laudantium cum nobis tempore sunt aut vero nesciunt inventore reiciendis quia sed molestiae minima fuga temporibus! Animi dicta ut expedita ipsum quos at dolorem vel fuga necessitatibus quaerat. Ea cum assumenda, obcaecati expedita veniam temporibus incidunt aliquam quas, minus, fugit quidem. Atque molestias nostrum reprehenderit cumque eos doloribus?</p>
+            <a href="https://en.wikipedia.org/wiki/Cat" target="_blank"
+              ><img
+                id="orange_cat_small"
+                src="/images/orange_cat_small.jpg"
+                alt="Orange cat"
+                loading="lazy"
+            /></a>
+          </div>
+          <div class="pic2">
+            <p>Link teisele sektsioonile</p>
+            <a href="#kontakt"
+              ><img
+                id="ottopix2"
+                src="images/ottopix2.jpg"
+                alt="Pilt Ottost"
+                loading="lazy"
+            /></a>
+          </div>
+        </div>
+        <p>SVG</p>
+        <svg width="120" height="120">
+          <circle cx="50" cy="50" r="40" />
+        </svg>
+        <!--video-->
+        <h4>Videos</h4>
+        <video
+          src="media/cat_video.mp4"
+          controls
+          width="320"
+          height="240"
+        ></video>
+        <!--navi riba info-->
+        <h4>Navigatsiooniriba</h4>
+        <p>
+          Sectionile anda id, siis kasutada ankruelementi &lt;a
+          href="#section-id"&gt;/Nimi&lt;a&gt;
+        </p>
+        <!--lisa grid kassid kasti sees-->
       </section>
-    <a href="#">Jump to Top</a>
+      <section id="section-css">
+        <h2>CSS</h2>
+        <!--flexbox näide-->
+        <h4>Flexbox</h4>
+        <!--grid näide-->
+        <h4>Grid</h4>
+        <p>Grid autofitiga</p>
+        <div class="cards">
+          <div>Kaart 1</div>
+          <div>Kaart 2</div>
+          <div>Kaart 3</div>
+          <div>Kaart 4</div>
+          <div>Kaart 5</div>
+        </div>
+        <p>Sisutäitja tekst lorem ja number kokku kirjutatud</p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugiat vero
+          quisquam nemo dolore expedita blanditiis officiis nostrum, nesciunt
+          placeat doloremque libero aperiam dolorum explicabo commodi ab
+          consequuntur excepturi qui minima nam iusto molestiae ex autem maxime.
+          Debitis, alias provident, repellendus sed facere maxime aliquid quia
+          reiciendis numquam labore aut amet! Deserunt dicta ex optio, animi,
+          quod similique ut eos id, repudiandae quibusdam iusto quas
+          repellendus! Obcaecati vel quod temporibus adipisci? Tenetur incidunt
+          nobis sit. Ipsam atque est exercitationem ea accusamus, ullam officia
+          cum hic sit velit autem aliquid iure expedita vitae. Praesentium,
+          dolor ab repellendus voluptatem facilis magnam quos a laborum
+          architecto? Qui velit similique quidem tenetur maxime neque nam
+          possimus eos sint, modi quo illum voluptas nemo. Odio impedit
+          assumenda magni repellat quaerat temporibus beatae hic libero
+          molestias optio praesentium, neque suscipit laborum ad dicta vitae,
+          dolorem officia pariatur error nemo fugiat? A unde eveniet labore
+          voluptatibus, ex assumenda omnis iusto laudantium cum nobis tempore
+          sunt aut vero nesciunt inventore reiciendis quia sed molestiae minima
+          fuga temporibus! Animi dicta ut expedita ipsum quos at dolorem vel
+          fuga necessitatibus quaerat. Ea cum assumenda, obcaecati expedita
+          veniam temporibus incidunt aliquam quas, minus, fugit quidem. Atque
+          molestias nostrum reprehenderit cumque eos doloribus?
+        </p>
+      </section>
+      <a href="#">Jump to Top</a>
     </main>
+
     <footer>
-      <div class="kaart" id="kontakt">
-      <img id="pfp" src="/images/ottopix.jpg" alt="cat otto sitting like he's tired of everything">
+      <!--visiitkaart-->
+      <div class="visiitkaart" id="kontakt">
+        <img
+          id="pfp"
+          src="/images/ottopix.jpg"
+          alt="cat otto sitting like he's tired of everything"
+        />
         <p class="username">Kadi</p>
         <p class="email">kadi.voika@voco.ee</p>
-      </div>  
+      </div>
     </footer>
   </body>
 </html>
