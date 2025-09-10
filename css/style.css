@@ -11,9 +11,6 @@ header {
   background-size: 100%;
   background-repeat: no-repeat;
   background-color: rgba(255, 145, 180, 0.738);
-  height: 200px;
-  padding-left: 50px;
-  padding-right: 50px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -33,6 +30,8 @@ footer {
 
 .title {
   background-color: blueviolet;
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
 
 nav {
