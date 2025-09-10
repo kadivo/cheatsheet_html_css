@@ -88,9 +88,14 @@
           </div>
         </div>
         <p>SVG</p>
+        <div>
         <svg width="120" height="120">
           <circle cx="50" cy="50" r="40" />
         </svg>
+        </div>
+        <div>
+          <p>Download ikoon svg</p>
+        <img id="download_icon" src="images/circle-down-regular-full.svg" alt="download icon"></div>
         <!--video-->
         <h4>Videos</h4>
         <video
@@ -124,13 +129,13 @@
         <h4>Värvid</h4>
           <p>HTML ja CSS toetavad palju värve nimede järgi, kuid saab kasutada veel:
             <ul>
-              <li>Hexadecimal colors</li>
-              <li>Hexadecimal colors with transparency</li>
-              <li>RGB colors</li>
-              <li>RGBA colors</li>
-              <li>HSL colors</li>
-              <li>HSLA colors</li>
-              <li>currentcolor keyword??</li>
+              <li id="hexcol">Hexadecimal colors - #RRGGBB #ff0000 (punane)</li>
+              <li id="hexcoltrans">Hexadecimal colors with transparency - #RRGGBBtransparency-value #ff0000 (punane 50% läbipaistvusega)</li>
+              <li id="rbgcol">RGB colors - rgb(red, green, blue) rgb(0 255 0) (roheline)</li>
+              <li id="rgbacol">RGBA colors with transparency - rgba(red, green, blue, alpha) rgba(0, 255, 0, 0.5) (roheline 50% läbipaistvusega) NB! kindlasti komad vahele)</li>
+              <li id="hslcol">HSL colors - hsl(hue, saturation, lightness) hsl(240, 100%, 50%) (sinine)</li>
+              <li id="hslacol">HSLA colors - hsla(hue, saturation, lightness, alpha), hsla(240, 100%, 50%, 0.5) (sinine 50% läbipaistvusega)</li>
+              <li id="currentcol">currentcolor keyword - kasutab sama värvi, mis divis juba määratud (color: blueviolet; border: 5px solid currentColor)</li>
             </ul>
           </p>
         <p>Sisutäitja tekst lorem ja number kokku kirjutatud</p>
@@ -159,7 +164,7 @@
           molestias nostrum reprehenderit cumque eos doloribus?
         </p>
       </section>
-      <a href="#">Jump to Top</a>
+      <a href="#">Tagasi algusesse</a>
     </main>
 
     <footer>

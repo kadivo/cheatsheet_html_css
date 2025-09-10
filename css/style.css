@@ -1,6 +1,6 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 14px;
+  font-size: 1rem;
   display: grid;
   background-color: bisque;
   margin: 0;
@@ -11,12 +11,14 @@ header {
   background-size: 100%;
   background-repeat: no-repeat;
   background-color: rgba(255, 145, 180, 0.738);
-  height: 350px;
+  height: 200px;
   padding-left: 50px;
   padding-right: 50px;
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  min-height: max-content;
 }
 
 main {
@@ -37,15 +39,29 @@ nav {
   background-color: aqua;
 }
 
-a:hover {
+/*pseudoklassid*/
+
+a:hover,
+a:focus,
+a:active {
   color: pink;
+  outline: 1px pink;
 }
+
+p::first-letter {
+  font-weight: bold;
+  font-size: larger;
+}
+
+/*headerid*/
 
 h1 {
   color: rgb(255, 255, 255);
-  padding-top: 30px;
-  padding-bottom: 30px;
+  margin: 50px;
+  font-size: 7vw;
+  /*
   font-size: 4rem;
+  */
   font-family: "Courier New", Courier, monospace;
   font-weight: bold;
 }
@@ -66,6 +82,8 @@ h3 {
   font-family: Arial, Helvetica, sans-serif;
   font-weight: 200;
 }
+
+/*pildid*/
 
 img {
   object-fit: cover;
@@ -115,11 +133,49 @@ svg {
   fill: rgb(192, 241, 255);
 }
 
+#download_icon {
+  width: 50px;
+}
+
+/*värvid*/
+#hexcol {
+  background-color: #ff0000;
+}
+
+#hexcoltrans {
+  background-color: #ff000050;
+}
+
+#rbgcol {
+  background-color: rgb(0, 255, 0);
+}
+
+#rgbacol {
+  background-color: rgba(0, 255, 0, 0.5);
+}
+
+#hslcol {
+  background-color: hsl(240, 100%, 50%);
+}
+
+#hslacol {
+  background-color: hsla(240, 100%, 50%, 0.5);
+}
+
+#currentcol {
+  color: blueviolet;
+  border: 5px solid currentColor;
+}
+
+/*kaardid*/
+
 .cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 1rem;
 }
+
+/*visiitkaart ja footer*/
 
 .visiitkaart {
   border-radius: 30px;
