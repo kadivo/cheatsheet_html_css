@@ -10,10 +10,9 @@
   </head>
 
   <body>
-    
     <header>
+      <!-- <div class="title_and_nav"> -->
       <a href="#content" class="skip-link">Liigu sisu juurde</a>
-      <div class="title_and_nav">
       <h1 class="title">CheatSheet</h1>
       <!--navgatisooniriba-->
       <nav class="main-nav">
@@ -22,7 +21,6 @@
         <a href="#kontakt">Kontakt</a>
         <a href="/images/ottopix2.jpg" target="_blank">Kõige olulisem link</a>
       </nav>
-      </div>
     </header>
     <!--sisu-->
     <main id="content">
@@ -39,23 +37,21 @@
         <p>footer - lehe või sektsiooni jalus (autoriõigused, kontaktid)</p>
         <!--lihtsalt sisutäide-->
         <div class="lists">
-          <h4>Headerite unorganised list</h4>
+          <h4>Unorganised list</h4>
           <ul>
-            <li>Header 1</li>
-            <li>Header 2</li>
-            <li>Header 3</li>
-            <li>Header 4</li>
-            <li>Header 5</li>
-            <li>Header 6</li>
+            <li>Piim</li>
+            <li>Munad</li>
+            <li>Jahu</li>
+            <li>Kakaopulber</li>
+            <li>Või</li>
           </ul>
-          <h4>Headerite organised list</h4>
+          <h4>Organised list</h4>
           <ol>
-            <li>Header 1</li>
-            <li>Header 2</li>
-            <li>Header 3</li>
-            <li>Header 4</li>
-            <li>Header 5</li>
-            <li>Header 6</li>
+            <li>Piim</li>
+            <li>Munad</li>
+            <li>Jahu</li>
+            <li>Kakaopulber</li>
+            <li>Või</li>
           </ol>
         </div>
         <!--koik mis piltidega-->
@@ -66,10 +62,15 @@
         </p>
         <!--Grid harjutus piltidega-->
         <div class="pictures">
-          <div class="grid_title"><p>Siin on kasutatud gridi, mobiilivaates flexi</p></div>
+          <div class="grid_title">
+            <p>Siin on kasutatud gridi, mobiilivaates flexi</p>
+          </div>
           <div class="pic1">
             <p>Link välislehele</p>
-            <a href="https://en.wikipedia.org/wiki/Cat" target="_blank"
+            <a
+              href="https://en.wikipedia.org/wiki/Cat"
+              target="_blank"
+              rel="noopener"
               ><img
                 id="orange_cat_small"
                 src="/images/orange_cat_small.jpg"
@@ -90,15 +91,28 @@
             /></a>
           </div>
         </div>
+        <p>Mis seal üleval toimub:</p>
+        <img
+          id="grid_joonis"
+          src="/images/grid_visualisation.PNG"
+          alt="Grid joonis"
+          title="Grid joonis"
+          loading="lazy"
+        />
         <p>SVG</p>
         <div>
-        <svg width="120" height="120">
-          <circle cx="50" cy="50" r="40" />
-        </svg>
+          <svg width="120" height="120">
+            <circle cx="50" cy="50" r="40" />
+          </svg>
         </div>
         <div>
           <p>Download ikoon svg</p>
-        <img id="download_icon" src="images/circle-down-regular-full.svg" alt="download icon"></div>
+          <img
+            id="download_icon"
+            src="images/circle-down-regular-full.svg"
+            alt="download icon"
+          />
+        </div>
         <!--video-->
         <h4>Videos</h4>
         <video
@@ -113,34 +127,103 @@
           Sectionile anda id, siis kasutada ankruelementi &lt;a
           href="#section-id"&gt;/Nimi&lt;a&gt;
         </p>
-        <!--lisa grid kassid kasti sees-->
       </section>
       <section id="section-css">
         <h2>CSS</h2>
         <!--flexbox näide-->
         <h4>Flexbox</h4>
+        <div class="flexbox">
+          <div>Kast 1</div>
+          <div>Kast 2</div>
+          <div>
+            Kast 3
+            <p>siin on rohkem teksti, kui teistes kastides.</p>
+          </div>
+          <div>Kast 4</div>
+        </div>
         <!--grid näide-->
         <h4>Grid</h4>
-        <p>Grid autofitiga</p>
+        <p>Grid autofitiga. Kassid kastides</p>
         <div class="cards">
-          <div>Kaart 1</div>
-          <div>Kaart 2</div>
-          <div>Kaart 3</div>
-          <div>Kaart 4</div>
-          <div>Kaart 5</div>
+          <div>
+            <img
+              id="box1"
+              src="/images/kass_kastis_1.jpg"
+              alt="Kassipojad kastis"
+              title="Kass kastis 1"
+              loading="lazy"
+            />
+          </div>
+          <div>
+            <img
+              id="box2"
+              src="/images/kass_kastis_2.jpg"
+              alt="Kassid müravad kastis"
+              title="Kass kastis 2"
+              loading="lazy"
+            />
+          </div>
+          <div>
+            <img
+              id="box3"
+              src="/images/kass_kastis_3.jpg"
+              alt="Kollane kass kastis"
+              title="Kass kastis 3"
+              loading="lazy"
+            />
+          </div>
+          <div>
+            <img
+              id="box4"
+              src="/images/kass_kastis_4.jpg"
+              alt="Triibuline kass kastis"
+              title="Kass kastis 4"
+              loading="lazy"
+            />
+          </div>
+          <div>
+            <img
+              id="box5"
+              src="/images/kass_kastis_5.jpg"
+              alt="Kohev kass kastis"
+              title="Kass kastis 5"
+              loading="lazy"
+            />
+          </div>
         </div>
+        <!--värvid-->
         <h4>Värvid</h4>
-          <p>HTML ja CSS toetavad palju värve nimede järgi, kuid saab kasutada veel:
-            <ul>
-              <li id="hexcol">Hexadecimal colors - #RRGGBB #ff0000 (punane)</li>
-              <li id="hexcoltrans">Hexadecimal colors with transparency - #RRGGBBtransparency-value #ff000050 (punane 50% läbipaistvusega)</li>
-              <li id="rbgcol">RGB colors - rgb(red, green, blue) rgb(0 255 0) (roheline)</li>
-              <li id="rgbacol">RGBA colors with transparency - rgba(red, green, blue, alpha) rgba(0, 255, 0, 0.5) (roheline 50% läbipaistvusega) NB! kindlasti komad vahele)</li>
-              <li id="hslcol">HSL colors - hsl(hue, saturation, lightness) hsl(240, 100%, 50%) (sinine)</li>
-              <li id="hslacol">HSLA colors - hsla(hue, saturation, lightness, alpha), hsla(240, 100%, 50%, 0.5) (sinine 50% läbipaistvusega)</li>
-              <li id="currentcol">currentcolor keyword - kasutab sama värvi, mis divis juba määratud (color: blueviolet; border: 5px solid currentColor)</li>
-            </ul>
-          </p>
+        <div>
+          HTML ja CSS toetavad palju värve nimede järgi, kuid saab kasutada
+          veel:
+          <ul>
+            <li id="hexcol">Hexadecimal colors - #RRGGBB #ff0000 (punane)</li>
+            <li id="hexcoltrans">
+              Hexadecimal colors with transparency - #RRGGBBtransparency-value
+              #ff000050 (punane 50% läbipaistvusega)
+            </li>
+            <li id="rbgcol">
+              RGB colors - rgb(red, green, blue) rgb(0 255 0) (roheline)
+            </li>
+            <li id="rgbacol">
+              RGBA colors with transparency - rgba(red, green, blue, alpha)
+              rgba(0, 255, 0, 0.5) (roheline 50% läbipaistvusega) NB! kindlasti
+              komad vahele
+            </li>
+            <li id="hslcol">
+              HSL colors - hsl(hue, saturation, lightness) hsl(240, 100%, 50%)
+              (sinine)
+            </li>
+            <li id="hslacol">
+              HSLA colors - hsla(hue, saturation, lightness, alpha), hsla(240,
+              100%, 50%, 0.5) (sinine 50% läbipaistvusega)
+            </li>
+            <li id="currentcol">
+              currentcolor keyword - kasutab sama värvi, mis divis juba määratud
+              (color: blueviolet; border: 5px solid currentColor)
+            </li>
+          </ul>
+        </div>
         <p>Sisutäitja tekst lorem ja number kokku kirjutatud</p>
         <p>
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugiat vero
@@ -168,7 +251,7 @@
         </p>
       </section>
       <div class="to_top">
-      <a href="#">Tagasi algusesse</a>
+        <a href="#">Tagasi algusesse</a>
       </div>
     </main>
 

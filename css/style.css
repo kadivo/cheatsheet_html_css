@@ -1,19 +1,10 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 1rem;
+  line-height: 1.6;
   background-color: rgb(226, 212, 228);
   color: rgb(53, 52, 52);
   margin: 0;
-}
-
-@media (max-width: 767px) {
-  body {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 1rem;
-    background-color: rgb(226, 212, 228);
-    color: rgb(53, 52, 52);
-    margin: 0;
-  }
 }
 
 header {
@@ -23,25 +14,9 @@ header {
   background-color: rgba(255, 145, 180, 0.738);
 }
 
-@media (max-width: 727px) {
-  header {
-    background-image: url("/images/hero-med.jpg");
-    background-size: 100%;
-    background-repeat: no-repeat;
-    background-color: rgba(255, 145, 180, 0.738);
-  }
-}
-
 main {
-  padding-left: 50px;
-  padding-right: 50px;
-}
-
-@media (max-width: 727px) {
-  main {
-    padding-left: 5%;
-    padding-right: 5%;
-  }
+  padding-left: 5%;
+  padding-right: 5%;
 }
 
 footer {
@@ -55,34 +30,9 @@ footer {
   float: left;
 }
 
-.title_and_nav {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  min-height: max-content;
-}
-
-@media (max-width: 727px) {
-  .title_and_nav {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    min-height: max-content;
-  }
-}
-
 .title {
-  padding-top: 50px;
-  padding-bottom: 50px;
-}
-
-@media (max-width: 727px) {
-  .title {
-    padding-top: 20px;
-    padding-bottom: 20px;
-  }
+  padding-top: 1em;
+  padding-bottom: 1em;
 }
 
 a {
@@ -91,22 +41,24 @@ a {
 
 nav {
   font-size: 1rem;
-  display: flex;
+  text-align: center;
   width: 100%;
+  display: flex;
   justify-content: space-evenly;
-  align-items: center;
-  padding: 20px;
+  align-items: flex-start;
+  padding: 15px;
   background-color: white;
 }
 
 @media (max-width: 727px) {
   nav {
     font-size: 1rem;
+    text-align: center;
     display: flex;
     width: 100%;
     justify-content: space-evenly;
-    align-items: center;
-    padding: 3%;
+    align-items: flex-start;
+    padding: 2%;
     background-color: white;
   }
 }
@@ -120,20 +72,13 @@ a:active {
   outline: 2px rgb(255, 0, 43);
 }
 
-p::first-letter {
-  font-weight: bold;
-  font-size: larger;
-}
-
 /*headerid*/
 
 h1 {
   color: rgb(255, 255, 255);
-  margin: 50px;
-  font-size: 7vw;
-  /*
   font-size: 4rem;
-  */
+  padding: 50px;
+  text-align: center;
   font-family: "Courier New", Courier, monospace;
   font-weight: bold;
 }
@@ -141,8 +86,9 @@ h1 {
 @media (max-width: 727px) {
   h1 {
     color: rgb(255, 255, 255);
-    margin: 50px;
-    font-size: 3.5rem;
+    font-size: 3rem;
+    padding: 20px;
+    text-align: center;
     font-family: "Courier New", Courier, monospace;
     font-weight: bold;
   }
@@ -179,10 +125,11 @@ h3 {
 
 .pictures {
   display: grid;
-  grid-template-columns: repeat(2 1fr);
-  grid-template-rows: repeat(2 1fr);
+  grid-template-columns: repeat(1fr 1fr);
+  grid-template-rows: repeat(1fr 1fr 1fr);
   gap: 10px;
   justify-content: center;
+  text-align: center;
 }
 
 @media (max-width: 727px) {
@@ -191,6 +138,7 @@ h3 {
     flex-direction: column;
     justify-content: center;
     gap: 5%;
+    text-align: center;
   }
 }
 
@@ -200,22 +148,15 @@ h3 {
   justify-self: center;
 }
 
-@media (max-width: 727px) {
-  .grid_title {
-    background-color: rgb(255, 101, 229);
-    text-align: center;
-  }
-}
-
 .pic1 {
-  grid-column-start: 1;
-  grid-row: 2;
+  grid-column: 1;
+  grid-row: 2 / span 2;
   background-color: rgb(184, 6, 145);
   justify-self: center;
 }
 
 .pic2 {
-  grid-column-start: 2;
+  grid-column: 2;
   grid-row: 2;
   background-color: rgb(233, 57, 124);
   justify-self: center;
@@ -247,6 +188,16 @@ h3 {
   }
 }
 
+#grid_joonis {
+  width: 400px;
+}
+
+@media (max-width: 727px) {
+  #grid_joonis {
+    max-width: 100%;
+  }
+}
+
 svg {
   stroke-width: 3px;
   stroke: black;
@@ -255,6 +206,32 @@ svg {
 
 #download_icon {
   width: 50px;
+}
+
+.flexbox > * {
+  border: 2px solid purple;
+  border-radius: 10px;
+  background-color: ghostwhite;
+  text-align: center;
+}
+
+.flexbox {
+  width: 500px;
+  border: 2px dotted deeppink;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+@media (max-width: 727px) {
+  .flexbox {
+    width: 500px;
+    max-width: 100%;
+    border: 2px dotted deeppink;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
 }
 
 /*värvid*/
@@ -291,8 +268,38 @@ svg {
 
 .cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 1rem;
+}
+
+#box1 {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+}
+
+#box2 {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+}
+
+#box3 {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+}
+
+#box4 {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+}
+
+#box5 {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
 }
 
 /*visiitkaart ja footer*/
