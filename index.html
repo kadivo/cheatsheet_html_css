@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="et">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -13,15 +13,15 @@
     <header>
       <!-- <div class="title_and_nav"> -->
       <a href="#content" class="skip-link">Liigu sisu juurde</a>
-      <h1 class="title">CheatSheet</h1>
-      <!--navgatisooniriba-->
-      <nav class="main-nav">
-        <a href="#section-html">HTML</a>
-        <a href="#section-css">CSS</a>
-        <a href="#kontakt">Kontakt</a>
-        <a href="/images/ottopix2.jpg" target="_blank">Kõige olulisem link</a>
-      </nav>
+      <h1 class="header" class="title">CheatSheet</h1>
     </header>
+    <!--navgatisooniriba-->
+    <nav id="navbar">
+      <a href="#section-html">HTML</a>
+      <a href="#section-css">CSS</a>
+      <a href="#kontakt">Kontakt</a>
+      <a href="/images/ottopix2.jpg" target="_blank">Kõige olulisem link</a>
+    </nav>
     <!--sisu-->
     <main id="content">
       <section id="section-html">
@@ -99,22 +99,16 @@
           title="Grid joonis"
           loading="lazy"
         />
-        <p>SVG</p>
+        <h4>SVG</h4>
         <div>
-          <svg width="120" height="120">
+          <svg id="ring" width="120" height="120">
             <circle cx="50" cy="50" r="40" />
           </svg>
-        </div>
-        <div>
-          <p>Download ikoon svg</p>
-          <img
-            id="download_icon"
-            src="images/circle-down-regular-full.svg"
-            alt="download icon"
-          />
+          <svg id="ellips_text"></svg>
+          <p>siia tuleb veel üks</p>
         </div>
         <!--video-->
-        <h4>Videos</h4>
+        <h4>Video</h4>
         <video
           src="media/kitten_wash.mp4"
           controls
@@ -191,6 +185,32 @@
             />
           </div>
         </div>
+        <!--positsioonid-->
+        <div class="position">
+          <h4>Position</h4>
+          <div class="pos_sticky">
+            Sticky - Kombinatsioon relative ja fixed positsioonidest.
+          </div>
+          <div class="pos_absolute">
+            Absolute - Elemendi positsioon, lähtudes lähimast positsioneeritud
+            vanemast.
+          </div>
+          <div class="pos_static">
+            Static - Kui väärtust pole määratud, on <em>static</em> vaikimisi
+            väärtus. Tavapärane dokumendi voolu järgimine.
+          </div>
+          <div class="pos_relative">
+            Relative - Elemendi positsioon lähtudes tavalisest asukohast.
+          </div>
+          <div class="pos_fixed">
+            Fixed - Elemendi positsioon on fikseeritud ja ei muutu kerimise
+            ajal.
+          </div>
+        </div>
+        <!--animatsioonid-->
+        <h4>Animatsioonid</h4>
+        <div class="rotate">Näita hiirega ja keera 20 kraadi</div>
+        <div class="animatsioon">Väike värviline animatsioon</div>
         <!--värvid-->
         <h4>Värvid</h4>
         <div>
@@ -226,33 +246,31 @@
         </div>
         <p>Sisutäitja tekst lorem ja number kokku kirjutatud</p>
         <p>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugiat vero
-          quisquam nemo dolore expedita blanditiis officiis nostrum, nesciunt
-          placeat doloremque libero aperiam dolorum explicabo commodi ab
-          consequuntur excepturi qui minima nam iusto molestiae ex autem maxime.
-          Debitis, alias provident, repellendus sed facere maxime aliquid quia
-          reiciendis numquam labore aut amet! Deserunt dicta ex optio, animi,
-          quod similique ut eos id, repudiandae quibusdam iusto quas
-          repellendus! Obcaecati vel quod temporibus adipisci? Tenetur incidunt
-          nobis sit. Ipsam atque est exercitationem ea accusamus, ullam officia
-          cum hic sit velit autem aliquid iure expedita vitae. Praesentium,
-          dolor ab repellendus voluptatem facilis magnam quos a laborum
-          architecto? Qui velit similique quidem tenetur maxime neque nam
-          possimus eos sint, modi quo illum voluptas nemo. Odio impedit
-          assumenda magni repellat quaerat temporibus beatae hic libero
-          molestias optio praesentium, neque suscipit laborum ad dicta vitae,
-          dolorem officia pariatur error nemo fugiat? A unde eveniet labore
-          voluptatibus, ex assumenda omnis iusto laudantium cum nobis tempore
-          sunt aut vero nesciunt inventore reiciendis quia sed molestiae minima
-          fuga temporibus! Animi dicta ut expedita ipsum quos at dolorem vel
-          fuga necessitatibus quaerat. Ea cum assumenda, obcaecati expedita
-          veniam temporibus incidunt aliquam quas, minus, fugit quidem. Atque
-          molestias nostrum reprehenderit cumque eos doloribus?
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorem ab
+          voluptates assumenda facilis nulla obcaecati eveniet, exercitationem
+          voluptatem minima repellendus aperiam vero quo odio, laboriosam a quos
+          perspiciatis totam reiciendis veniam praesentium fuga, optio nam
+          veritatis. Sit asperiores accusamus aliquid repellendus quam aliquam
+          voluptate, repellat aut esse quaerat totam doloribus dolorem sint
+          similique dicta! Atque reprehenderit quia quae magni. Qui
+          exercitationem, optio similique perferendis natus nobis quibusdam quos
+          commodi ullam consequatur dolor architecto! Optio nostrum repellendus,
+          corporis nesciunt eos tempore praesentium cumque esse sed nemo nam id
+          fuga explicabo necessitatibus a! Necessitatibus delectus minima
+          ratione exercitationem enim veritatis, repellat natus dolorum voluptas
+          nulla ut accusamus consequatur cumque iusto quae. Neque nam incidunt
+          vitae quasi nemo fugiat, voluptatum ipsa culpa repellat obcaecati rem.
+          Quos dolor esse praesentium, sed laborum tenetur doloribus cum,
+          suscipit omnis natus eius numquam dicta vitae debitis minus architecto
+          ducimus quia harum maxime dolores beatae aliquid fuga. Ea quos minima
+          architecto perspiciatis consectetur aliquam tempora aspernatur fugit
+          laborum distinctio consequuntur accusamus, facilis necessitatibus
+          blanditiis animi commodi optio quae magnam rem veniam itaque tempore
+          nihil! Rerum error, distinctio, repellendus blanditiis earum dolorem
+          cumque aspernatur qui, quod et magni culpa harum alias magnam?
+          Molestiae ducimus minus blanditiis saepe officia vel!
         </p>
       </section>
-      <div class="to_top">
-        <a href="#">Tagasi algusesse</a>
-      </div>
     </main>
 
     <footer>
@@ -266,6 +284,9 @@
         />
         <p class="username">Kadi Voika</p>
         <p class="email">kadi.voika@voco.ee</p>
+      </div>
+      <div class="to_top">
+        <a href="#">Tagasi algusesse</a>
       </div>
     </footer>
   </body>
