@@ -8,9 +8,9 @@ body {
 }
 
 header {
-  background-image: url("images/hero-med.avif");
-  background-image: url("images/hero-med.webp");
-  background-image: url("images/hero-med.jpg");
+  background-image: url("../images/hero-med.avif");
+  background-image: url("../images/hero-med.webp");
+  background-image: url("../images/hero-med.jpg");
   background-size: 100%;
   background-repeat: no-repeat;
   background-color: rgba(255, 145, 180, 0.738);
