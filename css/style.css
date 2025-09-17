@@ -1,11 +1,81 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
 body {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 1rem;
-  line-height: 1.6;
+  line-height: 1.8;
   background-color: rgb(226, 212, 228);
   color: rgb(53, 52, 52);
-  margin: 0;
 }
+
+main {
+  padding-left: 7%;
+  padding-right: 7%;
+}
+
+a {
+  color: #ff00b3;
+  text-decoration: none;
+}
+
+/* pseudoklassid */
+
+a:hover,
+a:focus,
+a:active {
+  color: teal;
+  outline: 2px solid rgb(255, 0, 43);
+  transition: 1s;
+}
+
+/* pealkirjad */
+h1,
+h2,
+h3,
+h4 {
+  padding: 20px 10px 5px 10px;
+  font-weight: bold;
+}
+
+h1 {
+  color: rgb(255, 255, 255);
+  font-size: 4rem;
+  padding: 75px;
+  text-align: center;
+  font-family: "Courier New", Courier, monospace;
+  font-weight: bold;
+}
+
+@media (max-width: 727px) {
+  h1 {
+    font-size: 3rem;
+    padding: 40px;
+  }
+}
+
+h2 {
+  color: rgb(172, 0, 80);
+  font-size: 2rem;
+  text-align: center;
+}
+
+h3 {
+  color: rgb(175, 69, 131);
+  font-size: 1.5rem;
+}
+
+@media (max-width: 727px) {
+  h3 {
+    text-align: center;
+  }
+}
+
+/* header */
 
 header {
   background-image: url("../images/hero-med.avif");
@@ -23,18 +93,6 @@ header {
   }
 }
 
-main {
-  padding-left: 5%;
-  padding-right: 5%;
-}
-
-footer {
-  display: grid;
-  width: 100%;
-  align-items: center;
-  justify-content: center;
-}
-
 .skip_link {
   float: left;
 }
@@ -42,10 +100,6 @@ footer {
 .title {
   padding-top: 1em;
   padding-bottom: 1em;
-}
-
-a {
-  color: #ff00b3;
 }
 
 #navbar {
@@ -60,6 +114,7 @@ a {
   background-color: white;
   position: sticky;
   top: 0;
+  z-index: 1;
 }
 
 @media (max-width: 727px) {
@@ -69,58 +124,7 @@ a {
   }
 }
 
-/*pseudoklassid*/
-
-a:hover,
-a:focus,
-a:active {
-  color: teal;
-  outline: 2px solid rgb(255, 0, 43);
-  transition: 1s;
-}
-
-/*headerid*/
-
-h1 {
-  color: rgb(255, 255, 255);
-  font-size: 4rem;
-  padding: 50px;
-  text-align: center;
-  font-family: "Courier New", Courier, monospace;
-  font-weight: bold;
-}
-
-@media (max-width: 727px) {
-  h1 {
-    font-size: 3rem;
-    padding: 20px;
-  }
-}
-
-h2 {
-  color: rgb(172, 0, 80);
-  padding-left: 20px;
-  padding-top: 30px;
-  font-size: 2rem;
-  font-family: Arial, Helvetica, sans-serif;
-  font-weight: 200;
-  text-align: center;
-}
-
-h3 {
-  color: rgb(175, 69, 131);
-  font-size: 1.5rem;
-  font-family: Arial, Helvetica, sans-serif;
-  font-weight: 200;
-}
-
-@media (max-width: 727px) {
-  h3 {
-    text-align: center;
-  }
-}
-
-/*pildid*/
+/* pildid */
 
 .pictures {
   display: grid;
@@ -203,7 +207,7 @@ h3 {
   fill: rgb(192, 241, 255);
 }
 
-/*flexbox*/
+/* flexbox harjutus */
 
 .flexbox > * {
   border: 2px solid purple;
@@ -226,7 +230,7 @@ h3 {
   }
 }
 
-/*kaardid*/
+/* grid harjutus */
 
 .cards {
   display: grid;
@@ -234,37 +238,17 @@ h3 {
   gap: 1rem;
 }
 
-#box1 {
-  width: 250px;
-  height: 250px;
-  object-fit: cover;
-}
-
-#box2 {
-  width: 250px;
-  height: 250px;
-  object-fit: cover;
-}
-
-#box3 {
-  width: 250px;
-  height: 250px;
-  object-fit: cover;
-}
-
-#box4 {
-  width: 250px;
-  height: 250px;
-  object-fit: cover;
-}
-
+#box1,
+#box2,
+#box3,
+#box4,
 #box5 {
   width: 250px;
   height: 250px;
   object-fit: cover;
 }
 
-/*positsioonid*/
+/* positsioonide harjutus */
 
 .pos_static {
   position: static;
@@ -297,13 +281,13 @@ h3 {
 
 .pos_sticky {
   position: sticky;
-  top: 0;
+  top: 60px;
   left: 300px;
   width: min-content;
   border: 2px dotted palevioletred;
 }
 
-/*animatsioonid*/
+/* animatsioonide harjutus */
 
 .rotate {
   padding: 20px;
@@ -353,7 +337,7 @@ h3 {
   }
 }
 
-/*värvid*/
+/* värvid */
 #hexcol {
   background-color: #ff0000;
 }
@@ -383,23 +367,29 @@ h3 {
   border: 5px solid currentColor;
 }
 
-/*visiitkaart ja footer*/
+/* visiitkaart ja footer */
+
+footer {
+  display: grid;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
 
 .to_top {
   position: fixed;
   right: 0;
   bottom: 0;
   padding: 5px;
-  font-size: 11px;
 }
 
 .visiitkaart {
   border-radius: 30px;
   border: 4px solid rgb(255, 192, 216);
-  margin: 10px;
+  margin: 30px;
   display: grid;
   grid-template-columns: min-content;
-  width: 270px;
+  width: max-content;
   padding-right: 16px;
   padding-left: 16px;
   background-color: #aa1a90;
@@ -417,18 +407,22 @@ h3 {
   border-radius: 50px;
   border: 2px solid rgb(255, 143, 186);
   float: left;
-  margin: 10px;
+  margin: 10px 10px 10px 0;
   grid-row: 1 / span 2;
   object-fit: cover;
+}
+
+.username,
+.email {
+  justify-self: center;
+  padding: 15px;
 }
 
 .username {
   font-weight: bold;
   grid-row: 1;
-  justify-self: center;
 }
 
 .email {
   grid-row: 2;
-  justify-self: center;
 }
