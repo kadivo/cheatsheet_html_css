@@ -30,18 +30,22 @@
     <main id="content">
       <section id="section-html">
         <h2>&lt;HTML&gt;</h2>
-        <p>HTML cheatsheet</p>
-        <h3>Kood</h3>
+        <p>
+          HTML ehk HyperText Markup Language on märgistuskeel, mida kasutatakse
+          veebilehtede struktuuri loomiseks. See on iga veebilehe alus, millele
+          lisatakse kujundus (CSS) ja dünaamiline käitumine (JavaScript).
+        </p>
         <!--html faili struktuur-->
-        <h4>Struktuur</h4>
+        <h3>Struktuur</h3>
         <p>head - Siia lähevad metad, title, lingid stylesheetile jms</p>
         <p>body - Siia läheb kogu lehe sisu</p>
         <p>header - Navigatsiooniriba jms</p>
         <p>main - Lehe põhimaterjal</p>
         <p>footer - lehe või sektsiooni jalus (autoriõigused, kontaktid)</p>
         <!--lihtsalt sisutäide-->
+        <h3>Listid</h3>
         <div class="lists">
-          <h4>Unorganised list</h4>
+          <h4>Unordered list</h4>
           <ul>
             <li>Piim</li>
             <li>Munad</li>
@@ -49,7 +53,7 @@
             <li>Kakaopulber</li>
             <li>Või</li>
           </ul>
-          <h4>Organised list</h4>
+          <h4>Ordered list</h4>
           <ol>
             <li>Piim</li>
             <li>Munad</li>
@@ -59,7 +63,7 @@
           </ol>
         </div>
         <!--koik mis piltidega-->
-        <h4>Images</h4>
+        <h3>Meedia</h3>
         <p>
           &lt;img src="pildi link" alt="pildi alternatiivteks kui veebileht ei
           lae või kui kasutatakse ekraanilugejat"&gt;
@@ -105,14 +109,56 @@
         />
         <!--SVG-->
         <h4>SVG</h4>
+        <p>
+          Inline SVG tähendab, et SVG (vektorgraafika) kood kirjutatakse otse
+          HTML-i dokumendi sisse, mitte ei kasutata seda eraldi failina või
+          pildina.
+        </p>
+        <p>Võrdlus teiste viisidega:</p>
+        <ul>
+        </ul>
+        <li>
+          &lt;img src="icon.svg" /&gt; → SVG käitub nagu tavaline pilt, ei saa
+          elemente seest muuta.
+        </li>
+        <li>
+          background-image: url("icon.svg") → SVG pannakse taustaks, aga
+          seestpoolt ei ole muudetav.
+        </li>
+        <li>
+          Inline SVG → saad iga kujundi (&lt;path&gt;, &lt;circle&gt;,
+          &lt;rect&gt;) eraldi stiliseerida ja animatsioone teha.
+        </li>
+        <!-- inline SVG näide -->
         <svg id="ring" width="120" height="120">
           <circle cx="50" cy="50" r="40" />
         </svg>
-        <!--download nupp-->
-        <h4>Download nupp, mis tegelikult viib FontAwesome lehele</h4>
-        <a href="https://fontawesome.com" target="_blank"
-          ><div class="btn">Download <i class="fa-solid fa-download"></i></div
-        ></a>
+        <br />
+        <p>
+          Inline SVG-s &lt;path&gt; element on kõige paindlikum viis kujundite
+          joonistamiseks. Kuju määratakse d atribuudi abil.
+        </p>
+        <p>Olulisemad käsud:
+          <ul>
+          <li>M - move to → viib pliiatsi kindlasse punkti (ilma joont tõmbamata).</li>
+          <li>L - line to → tõmbab sirgjoone antud punkti.</li>
+          <li>H - horizontal line to</li>
+          <li>V - vertical line to</li>
+          <li>C - cubic bezier curve (kolme kontrollpunktiga kõver).</li>
+          <li>Q - quadratic bezier curve (ühe kontrollpunktiga kõver).</li>
+          <li>Z või z - sulgeb tee (joonistab viimase punkti ja alguspunkti vahele joone).</li>
+          </ul>
+        </p>
+        <!-- ChatGPT südame SVG -->
+        <svg class="icon" viewBox="0 0 24 24">
+          <path
+            d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 
+             2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41 0.81 
+             4.5 2.09C13.09 3.81 14.76 3 16.5 3 
+             19.58 3 22 5.42 22 8.5c0 3.78-3.4 
+             6.86-8.55 11.54L12 21.35z"
+          />
+        </svg>
         <!--video-->
         <h4>Video</h4>
         <video
@@ -122,16 +168,33 @@
           height="240"
         ></video>
         <!--navi riba info-->
-        <h4>Navigatsiooniriba</h4>
+        <h3>Navigatsiooniriba</h3>
         <p>
-          Sectionile anda id, siis kasutada ankruelementi &lt;a
-          href="#section-id"&gt;/Nimi&lt;a&gt;
+          Navigatsiooniriba tegemiseks kasutatakse spetsiaalset elementi
+          &lt;nav&gt;.
+        </p>
+        <p>
+          Igale veebilehel olevale sectionile anda id, siis saab kasutada
+          ankruelementi &lt;a href="#section-id"&gt;Section Name&lt;a&gt;
         </p>
       </section>
       <section id="section-css">
         <h2>CSS</h2>
+        <p>
+          CSS ehk Cascading Style Sheets on stiililehtede keel, mida kasutatakse
+          HTML-i või XML-i dokumentide välimuse kujundamiseks. See ei muuda sisu
+          iseennast, vaid määrab kuidas sisu välja näeb, näiteks värvid, fondid,
+          paigutus ja animatsioonid.
+        </p>
         <!--flexbox näide-->
-        <h4>Flexbox</h4>
+        <h3>Flexbox</h3>
+        <p>
+          Flexbox (ehk Flexible Box Layout) on CSS-i paigutusmudel, mis
+          võimaldab elemente järjestada ja paigutada paindlikult ühes mõõtmes -
+          kas reas (horisontaalselt) või veerus (vertikaalselt). See on eriti
+          kasulik siis, kui tahad elemente ühtlaselt jaotada, keskele sättida
+          või muuta nende suurust vastavalt saadaval olevale ruumile.
+        </p>
         <div class="flexbox">
           <div>Kast 1</div>
           <div>Kast 2</div>
@@ -141,9 +204,32 @@
           </div>
           <div>Kast 4</div>
         </div>
+        <p>
+          Lisainfo:
+          <a href="https://www.w3schools.com/css/css3_flexbox.asp">W3S</a>,
+          <a
+            href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox"
+            >Mozilla Developer</a
+          >
+        </p>
+        <p>
+          Kui CSS Grid sobib paremini keeruliste kahe-mõõtmeliste paigutuste
+          jaoks (ridade + veergude kombinatsioon), siis Flexbox on parim
+          järjestatud elementide jaoks (näiteks navigeerimisriba, kaardirida,
+          nupugrupp).
+        </p>
         <!--grid näide-->
-        <h4>Grid</h4>
-        <p>Grid autofitiga. Kassid kastides</p>
+        <h3>Grid</h3>
+        <p>
+          CSS Grid on paigutussüsteem, mis võimaldab sul veebilehel elemente
+          paigutada kahemõõtmelises võrgustikus - nii ridade kui ka veergude
+          kaupa. See teeb keerulisemate disainide loomise lihtsamaks ja
+          paindlikumaks kui näiteks flexbox, mis töötab põhiliselt ühes mõõtmes
+          (kas rida või veerg).
+        </p>
+        <p>
+          <em><b>Näide:</b> Grid autofitiga. Kassid kastides</em>
+        </p>
         <div class="cards">
           <div>
             <img
@@ -191,9 +277,26 @@
             />
           </div>
         </div>
+        <p>
+          Lisainfo:
+          <a href="https://www.w3schools.com/css/css_grid.asp">W3S</a>,
+          <a
+            href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout"
+            >Mozilla Developer</a
+          >
+        </p>
         <!--positsioonid-->
+        <h3>Positsioning</h3>
+        <p>
+          CSS-is position omadus määrab, kuidas element paigutub lehel ja kuidas
+          ta suhestub teiste elementidega. Selle abil saab elemente liigutada
+          täpsemini kui tavalise voo (normal flow) puhul.
+        </p>
+        <p>
+          Kui elemendid kattuvad, määrab z-index nende kihituse. Mida suurem
+          z-index väärtus, seda kõrgemal kihil element asub.
+        </p>
         <div class="position">
-          <h4>Position</h4>
           <div class="pos_sticky">
             Sticky - Kombinatsioon relative ja fixed positsioonidest.
           </div>
@@ -212,13 +315,29 @@
             Fixed - Elemendi positsioon on fikseeritud ja ei muutu kerimise
             ajal.
           </div>
+          <p>
+            Lisainfo:
+            <a href="https://www.w3schools.com/css/css_positioning.asp">W3S</a>
+          </p>
         </div>
         <!--animatsioonid-->
-        <h4>Animatsioonid</h4>
+        <h3>Animatsioonid</h3>
+        <p>
+          CSS animations võimaldavad muuta elemente sujuvalt ajas, ilma
+          JavaScriptita. Nendega saab teha liikumisi, värvimuutusi, pööramisi ja
+          palju muud.
+        </p>
         <div class="rotate">Näita hiirega ja keera 20 kraadi</div>
         <div class="animatsioon">Väike värviline animatsioon</div>
+        <!--download nupp-->
+        <h3>Download nupp</h3>
+        <p>Harjutamiseks download nupp, mis tegelikult viib FontAwesome lehele</p>
+        <p>Siin on kasutatud FontAwesome ikooni.</p>
+        <a id="btn" href="https://fontawesome.com" target="_blank"
+          ><div class="btn">Download <i class="fa-solid fa-download"></i></div
+        ></a>
         <!--värvid-->
-        <h4>Värvid</h4>
+        <h3>Värvid</h3>
         <div>
           HTML ja CSS toetavad palju värve nimede järgi, kuid saab kasutada
           veel:
@@ -250,31 +369,21 @@
             </li>
           </ul>
         </div>
-        <p>Sisutäitja tekst lorem ja number kokku kirjutatud</p>
+        <h3>Sisutäitja tekst lorem ja number kokku kirjutatud</h3>
+        <p>lorem100</p>
         <p>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorem ab
-          voluptates assumenda facilis nulla obcaecati eveniet, exercitationem
-          voluptatem minima repellendus aperiam vero quo odio, laboriosam a quos
-          perspiciatis totam reiciendis veniam praesentium fuga, optio nam
-          veritatis. Sit asperiores accusamus aliquid repellendus quam aliquam
-          voluptate, repellat aut esse quaerat totam doloribus dolorem sint
-          similique dicta! Atque reprehenderit quia quae magni. Qui
-          exercitationem, optio similique perferendis natus nobis quibusdam quos
-          commodi ullam consequatur dolor architecto! Optio nostrum repellendus,
-          corporis nesciunt eos tempore praesentium cumque esse sed nemo nam id
-          fuga explicabo necessitatibus a! Necessitatibus delectus minima
-          ratione exercitationem enim veritatis, repellat natus dolorum voluptas
-          nulla ut accusamus consequatur cumque iusto quae. Neque nam incidunt
-          vitae quasi nemo fugiat, voluptatum ipsa culpa repellat obcaecati rem.
-          Quos dolor esse praesentium, sed laborum tenetur doloribus cum,
-          suscipit omnis natus eius numquam dicta vitae debitis minus architecto
-          ducimus quia harum maxime dolores beatae aliquid fuga. Ea quos minima
-          architecto perspiciatis consectetur aliquam tempora aspernatur fugit
-          laborum distinctio consequuntur accusamus, facilis necessitatibus
-          blanditiis animi commodi optio quae magnam rem veniam itaque tempore
-          nihil! Rerum error, distinctio, repellendus blanditiis earum dolorem
-          cumque aspernatur qui, quod et magni culpa harum alias magnam?
-          Molestiae ducimus minus blanditiis saepe officia vel!
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam
+          asperiores laboriosam quo placeat nostrum accusamus architecto
+          quisquam! Vero sapiente dignissimos debitis sit nulla perspiciatis
+          ipsa veniam, veritatis hic facere inventore at? Delectus ut dolor
+          doloribus, ducimus, tempora aut eaque tempore, iusto accusamus
+          reprehenderit quasi officiis ab commodi magnam voluptatibus cumque
+          soluta possimus sed sequi! Laborum eligendi optio voluptatem obcaecati
+          debitis numquam ullam sequi unde saepe, consequuntur rerum quas odio
+          hic dolorum labore aperiam cupiditate minima facilis quisquam quo ex
+          impedit totam cumque. Adipisci explicabo iusto dolores officiis earum
+          nisi, voluptates ducimus aliquid officia cupiditate, eos alias, eaque
+          illo sed quidem?
         </p>
       </section>
     </main>

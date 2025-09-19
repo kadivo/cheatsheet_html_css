@@ -18,6 +18,10 @@ main {
   padding-right: 7%;
 }
 
+p {
+  padding-bottom: 10px;
+}
+
 a {
   color: #ff00b3;
   text-decoration: none;
@@ -78,9 +82,8 @@ h3 {
 /* header */
 
 header {
-  background-image: url("../images/hero-med.avif");
-  background-image: url("../images/hero-med.webp");
-  background-image: url("../images/hero-med.jpg");
+  background-image: url("../images/hero-med.avif"),
+    url("../images/hero-med.webp"), url("../images/hero-med.jpg");
   background-size: 100%;
   background-repeat: no-repeat;
   background-color: rgba(255, 145, 180, 0.738);
@@ -200,8 +203,25 @@ header {
 
 #ring {
   stroke-width: 3px;
-  stroke: black;
-  fill: rgb(192, 241, 255);
+  stroke: rgb(255, 0, 157);
+  fill: rgb(247, 0, 255);
+}
+
+/* ChatGPT südame SVG */
+
+.icon {
+  width: 80px;
+  height: 80px;
+  cursor: pointer;
+}
+
+.icon path {
+  fill: #444;
+  transition: fill 0.3s ease;
+}
+
+.icon:hover path {
+  fill: #e63946;
 }
 
 /* flexbox harjutus */
@@ -241,20 +261,6 @@ header {
   object-fit: cover;
 }
 
-.btn {
-  display: inline-block;
-  color: aliceblue;
-  font-size: 20px;
-  background: #ff00b3;
-  padding: 12px 30px;
-  cursor: pointer;
-  border-radius: 5px;
-}
-
-.btn:hover {
-  background: #a50274;
-}
-
 /* positsioonide harjutus */
 
 .pos_static {
@@ -268,6 +274,12 @@ header {
   left: 50px;
   border: 2px dotted palevioletred;
   width: 200px;
+}
+
+@media (max-width: 727px) {
+  .pos_relative {
+    width: 150px;
+  }
 }
 
 .pos_absolute {
@@ -286,12 +298,25 @@ header {
   font-size: 11px;
 }
 
+@media (max-width: 727px) {
+  .pos_fixed {
+    top: 500px;
+    font-size: 10px;
+  }
+}
+
 .pos_sticky {
   position: sticky;
   top: 60px;
   left: 300px;
   width: min-content;
   border: 2px dotted palevioletred;
+}
+
+@media (max-width: 727px) {
+  .position {
+    font-size: 10px;
+  }
 }
 
 /* animatsioonide harjutus */
@@ -342,6 +367,29 @@ header {
     background-color: red;
     left: 0px;
   }
+}
+
+/* download nupp */
+.btn {
+  display: inline-block;
+  color: aliceblue;
+  font-size: 20px;
+  background: #ff00b3;
+  padding: 12px 30px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.btn:hover {
+  background: #a50274;
+  transition: 0.3s ease;
+}
+
+#btn:hover,
+#btn:focus,
+#btn:active {
+  color: white;
+  outline: none;
 }
 
 /* värvid */
