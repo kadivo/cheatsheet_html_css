@@ -15,9 +15,8 @@
 
   <body>
     <header>
-      <!-- <div class="title_and_nav"> -->
       <a href="#content" class="skip-link">Liigu sisu juurde</a>
-      <h1 class="header" class="title">CheatSheet</h1>
+      <h1 class="header" id="title">CheatSheet</h1>
     </header>
     <!--navgatisooniriba-->
     <nav id="navbar">
@@ -42,7 +41,7 @@
         <p>header - Navigatsiooniriba jms</p>
         <p>main - Lehe põhimaterjal</p>
         <p>footer - lehe või sektsiooni jalus (autoriõigused, kontaktid)</p>
-        <!--lihtsalt sisutäide-->
+        <!-- listide näited -->
         <h3>Listid</h3>
         <div class="lists">
           <h4>Unordered list</h4>
@@ -62,7 +61,7 @@
             <li>Või</li>
           </ol>
         </div>
-        <!--koik mis piltidega-->
+        <!--koik mis meediaga-->
         <h3>Meedia</h3>
         <p>
           &lt;img src="pildi link" alt="pildi alternatiivteks kui veebileht ei
@@ -116,19 +115,19 @@
         </p>
         <p>Võrdlus teiste viisidega:</p>
         <ul>
+          <li>
+            &lt;img src="icon.svg" /&gt; → SVG käitub nagu tavaline pilt, ei saa
+            elemente seest muuta.
+          </li>
+          <li>
+            background-image: url("icon.svg") → SVG pannakse taustaks, aga
+            seestpoolt ei ole muudetav.
+          </li>
+          <li>
+            Inline SVG → saad iga kujundi (&lt;path&gt;, &lt;circle&gt;,
+            &lt;rect&gt;) eraldi stiliseerida ja animatsioone teha.
+          </li>
         </ul>
-        <li>
-          &lt;img src="icon.svg" /&gt; → SVG käitub nagu tavaline pilt, ei saa
-          elemente seest muuta.
-        </li>
-        <li>
-          background-image: url("icon.svg") → SVG pannakse taustaks, aga
-          seestpoolt ei ole muudetav.
-        </li>
-        <li>
-          Inline SVG → saad iga kujundi (&lt;path&gt;, &lt;circle&gt;,
-          &lt;rect&gt;) eraldi stiliseerida ja animatsioone teha.
-        </li>
         <!-- inline SVG näide -->
         <svg id="ring" width="120" height="120">
           <circle cx="50" cy="50" r="40" />
@@ -138,17 +137,23 @@
           Inline SVG-s &lt;path&gt; element on kõige paindlikum viis kujundite
           joonistamiseks. Kuju määratakse d atribuudi abil.
         </p>
-        <p>Olulisemad käsud:
-          <ul>
-          <li>M - move to → viib pliiatsi kindlasse punkti (ilma joont tõmbamata).</li>
+
+        <h4>Olulisemad käsud:</h4>
+        <ul>
+          <li>
+            M - move to → viib pliiatsi kindlasse punkti (ilma joont tõmbamata).
+          </li>
           <li>L - line to → tõmbab sirgjoone antud punkti.</li>
           <li>H - horizontal line to</li>
           <li>V - vertical line to</li>
           <li>C - cubic bezier curve (kolme kontrollpunktiga kõver).</li>
           <li>Q - quadratic bezier curve (ühe kontrollpunktiga kõver).</li>
-          <li>Z või z - sulgeb tee (joonistab viimase punkti ja alguspunkti vahele joone).</li>
-          </ul>
-        </p>
+          <li>
+            Z või z - sulgeb tee (joonistab viimase punkti ja alguspunkti vahele
+            joone).
+          </li>
+        </ul>
+
         <!-- ChatGPT südame SVG -->
         <svg class="icon" viewBox="0 0 24 24">
           <path
@@ -159,6 +164,13 @@
              6.86-8.55 11.54L12 21.35z"
           />
         </svg>
+        <p>
+          Lisainfo:
+          <a
+            href="https://developer.mozilla.org/en-US/docs/Web/SVG/Guides/SVG_in_HTML"
+            >Mozilla Developer</a
+          >
+        </p>
         <!--video-->
         <h4>Video</h4>
         <video
@@ -176,6 +188,10 @@
         <p>
           Igale veebilehel olevale sectionile anda id, siis saab kasutada
           ankruelementi &lt;a href="#section-id"&gt;Section Name&lt;a&gt;
+        </p>
+        <p>
+          Lisainfo:
+          <a href="https://www.w3schools.com/css/css_navbar.asp">W3S</a>
         </p>
       </section>
       <section id="section-css">
@@ -315,11 +331,11 @@
             Fixed - Elemendi positsioon on fikseeritud ja ei muutu kerimise
             ajal.
           </div>
-          <p>
-            Lisainfo:
-            <a href="https://www.w3schools.com/css/css_positioning.asp">W3S</a>
-          </p>
         </div>
+        <p>
+          Lisainfo:
+          <a href="https://www.w3schools.com/css/css_positioning.asp">W3S</a>
+        </p>
         <!--animatsioonid-->
         <h3>Animatsioonid</h3>
         <p>
@@ -329,13 +345,26 @@
         </p>
         <div class="rotate">Näita hiirega ja keera 20 kraadi</div>
         <div class="animatsioon">Väike värviline animatsioon</div>
+        <p>
+          Lisainfo:
+          <a href="https://www.w3schools.com/css/css3_animations.asp">W3S</a>
+        </p>
         <!--download nupp-->
         <h3>Download nupp</h3>
-        <p>Harjutamiseks download nupp, mis tegelikult viib FontAwesome lehele</p>
+        <p>
+          Harjutamiseks download nupp, mis tegelikult viib FontAwesome lehele
+        </p>
         <p>Siin on kasutatud FontAwesome ikooni.</p>
         <a id="btn" href="https://fontawesome.com" target="_blank"
           ><div class="btn">Download <i class="fa-solid fa-download"></i></div
         ></a>
+        <p>
+          Lisainfo:
+          <a
+            href="https://www.w3schools.com/howto/howto_css_download_button.asp"
+            >W3S</a
+          >
+        </p>
         <!--värvid-->
         <h3>Värvid</h3>
         <div>
@@ -369,6 +398,7 @@
             </li>
           </ul>
         </div>
+        <p>Lisa: <a href="https://htmlcolorcodes.com/">HTML Color Picker</a></p>
         <h3>Sisutäitja tekst lorem ja number kokku kirjutatud</h3>
         <p>lorem100</p>
         <p>
